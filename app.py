@@ -10,7 +10,7 @@ model = pickle.load(open('Basic_Classifier.sav', 'rb'))
 model1 = pickle.load(open('High_Regression_Log_Life.sav', 'rb'))
 model2 = pickle.load(open('Low_Regression.sav', 'rb'))
 import csv
-BASE_DIR = ""
+BASE_DIR = "C:\\Users\\DEVKAR\\PycharmProjects\\Battery_Life_Pred\\test_files"
 import os
 @app.route('/',methods=['GET'])
 def Home():
