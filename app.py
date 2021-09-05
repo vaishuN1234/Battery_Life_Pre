@@ -10,7 +10,7 @@ model = pickle.load(open('Basic_Classifier.sav', 'rb'))
 model1 = pickle.load(open('High_Regression_Log_Life.sav', 'rb'))
 model2 = pickle.load(open('Low_Regression.sav', 'rb'))
 import csv
-BASE_DIR = "C:\\Users\\DEVKAR\\Desktop\\DSPractice\\Battery_prognosis\\Data Files"
+BASE_DIR = ""
 import os
 @app.route('/',methods=['GET'])
 def Home():
@@ -94,10 +94,6 @@ def predict():
                                        a=round(float(charge_tym), 3), b=round(float(log10_Var100_10), 3),
                                        c=round(float(Intergration), 3), d=round(float(min1), 3), e=Dis_max, f=Slope,
                                        g=Intercept, h=iR_min, i=iR_diff, j=Actual_Life)
-
-
-
-
 
     else:
         return render_template('result.html')
